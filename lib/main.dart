@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_example/pages/pets.dart';
 import 'package:hive_example/pages/search.dart';
-import 'home.dart';
+import 'package:hive_example/splash.dart';
 
 void main() {
   runApp(
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: Home(),
       routes: {
-        '/': (context) => const Home(),
+        '/': (context) => const Splash(),
         '/search': (context) => const Search(),
         '/pets': (context) => const Pets(),
       },

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:hive_example/model/animal_info.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -45,7 +45,7 @@ class _SearchageState extends State<Search> {
       backgroundColor: Colors.grey[100],
       body: Container(
         padding: const EdgeInsets.all(25),
-        margin: const EdgeInsets.only(top: 30),
+        // margin: const EdgeInsets.only(top: 30),
         child: Column(
           children: [
             TextField(
@@ -62,12 +62,12 @@ class _SearchageState extends State<Search> {
             ),
             Expanded(
               child: ListView.builder(
-                itemCount: names[0].length,
+                itemCount: hostory.length,
                 itemBuilder: (context, index) {
                   return Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: Colors.amber,
+                      color: Colors.grey[200],
                     ),
                     padding: const EdgeInsets.all(15),
                     margin: const EdgeInsets.only(top: 10),
@@ -77,11 +77,11 @@ class _SearchageState extends State<Search> {
                         Row(
                           children: [
                             CircleAvatar(
-                              backgroundImage: AssetImage(names[1][index]),
+                              backgroundImage: AssetImage(hostory[index].image),
                             ),
                             const SizedBox(width: 10),
                             Text(
-                              names[0][index],
+                              hostory[index].name,
                               style: const TextStyle(fontSize: 20),
                             ),
                           ],

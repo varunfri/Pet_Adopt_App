@@ -100,7 +100,7 @@ class _PetsState extends State<Pets> {
                                   color: Colors.purple[100],
                                   borderRadius: BorderRadius.circular(10)),
                               child: Text(
-                                hostory[index].name,
+                                "${hostory[index].sex}, ${hostory[index].age} yrs",
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                 ),
